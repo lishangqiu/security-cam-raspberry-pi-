@@ -31,7 +31,37 @@ if you have already setup your raspberry pi, please skip this step
 
 [Follow instructions on this webpage to setup](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up)
 
-2. connect your USB webcam to your raspberry pi
+2. open terminal, run `hostname -I` to check the raspberry pi's ip and record it(we will use it later)
+
+3. install python3 on raspberry pi
+
+if you have already installed python\]opl., please skip this step
+
+open terminal and run `sudo apt-get install python3`
+
+4. connect your USB webcam to your raspberry pi
 
 <img src="https://www.teachmemicro.com/wp-content/uploads/2018/02/raspberry-pi-webcam.jpg" width="375">
 
+5. copy the python file in `on_raspberrypi` folder to raspberry pi(in the `home` directory)
+
+6. open terminal and run command `sudo python3 server.py`
+
+you can change the default port by adding `--port (your port)`
+
+now the program is pending for the client to receive the data
+
+## Setup the project on client device
+1. install python3 on your client device
+
+[Please follow the instructions on this website](https://realpython.com/installing-python/)
+
+2.download the python file in `on_client` to where your default terminal/DOS path is.
+
+3. open DOS/terminal/console and run cammand `sudo python3 client.py --ip (the ip recorded) --port (the port used)`
+
+4. if successful, it should appear like this
+
+## further more
+
+1. if we wan't raspberry pi to be a security camera, we shouldn't need to run command when booting it. we can 
